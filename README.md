@@ -26,8 +26,3 @@ Installation
 [npm]: https://www.npmjs.org/
 [traceur]: https://github.com/google/traceur-compiler
 [features]: https://github.com/google/traceur-compiler/wiki/LanguageFeatures
-
-Installation issues
--------------
-If you get the error `Error: No compatible version found: archy@'^0.0.2` when installing gulp
-you should upgrade your version of node. 0.10.25 worked for me - Andy

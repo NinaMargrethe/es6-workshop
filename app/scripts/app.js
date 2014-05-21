@@ -1,3 +1,5 @@
+var registry = require('./registry');
+
 /**
 Default parameters
 ==================

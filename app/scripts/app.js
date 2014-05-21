@@ -1,9 +1,43 @@
-let names = ['Per', 'Pål', 'Espen'];
+/**
+Default parameters
+==================
+Create a function that logs out the text for the Norwegian entry in the
+Eurovision Song Contest 1980, «Sámiid Ædnan»,
+with the word “krutt” replaceable by an argument given to the function.
 
-console.log(...names);
+Call the function with different inputs, and no inputs.
+**/
 
 
-// REST TASK
+/**
+Arrow functions
+===============
+Using the provided array of reindeer owners,
+find and show owners that has a firstName of “Mikkel”.
+**/
+
+
+/**
+Destructuring
+=============
+Create a printOwner function.
+It should print the full name of all reindeer owners.
+
+Use destructuring (and forEach).
+**/
+
+/**
+Rest parameters
+===============
+Create a function that takes in any number of places as arguments and finds the
+Reindeer owners in that place.
+**/
+
+/**
+Spread operator
+===============
+Add two new Reindeer owners to the list of reindeer owners.
+**/
 
 //Helper function
 /*
@@ -15,9 +49,6 @@ var contains = (list, element) => {
       return value === element;
     });
 };
-
-
-// SPREAD TASK
 
 var newOwners = [
   {
@@ -52,3 +83,23 @@ var newOwners = [
     c5: 'q',
     c6: 'c'
   }];
+
+
+/**
+Template Literals
+=================
+Write a function that prints out the given name in a sentence,
+using template strings.
+**/
+
+
+/**
+Generators
+==========
+Create a generator that returns numbers in the Fibonacci number sequence.
+(1, 1, 2, 3, 5…)
+
+Extra task:
+Create a “Mikkel” generator, returning owners with the firstName of Mikkel.
+**/
+

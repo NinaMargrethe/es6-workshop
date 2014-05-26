@@ -35,12 +35,6 @@ Create a function that takes in any number of places as arguments and finds the
 Reindeer owners in that place.
 **/
 
-/**
-Spread operator
-===============
-Add two new Reindeer owners to the list of reindeer owners.
-**/
-
 //Helper function
 /*
  * Takes an element and an array and returns
@@ -51,6 +45,12 @@ var contains = (list, element) => {
       return value === element;
     });
 };
+
+/**
+Spread operator
+===============
+Add two new Reindeer owners to the list of reindeer owners.
+**/
 
 var newOwners = [
   {

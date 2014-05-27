@@ -4,6 +4,7 @@ var connect = require('gulp-connect');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var es6ify = require('es6ify');
+var mold = require('mold-source-map');
 
 var baseDir = './app/';
 var scriptDir = baseDir + 'scripts/';
@@ -28,6 +29,7 @@ gulp.task('scripts', function () {
     .transform(es6ify)
     .bundle({ debug: true })
     .on('error', gutil.log)
+    .pipe(mold.transformSourcesRelativeTo(baseDir))
     .pipe(source('app.js'))
     .pipe(gulp.dest(distDir))
     .pipe(connect.reload());

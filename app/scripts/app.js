@@ -7,6 +7,13 @@ Write a function that prints out the given name in a sentence,
 using template strings.
 **/
 
+var msg = function(name) {
+  let tmpl = `Howdy ${name}!`;
+  console.log(tmpl);
+};
+
+//msg('Lars')
+
 
 /**
 Default parameters
@@ -16,6 +23,11 @@ Add a default name to the function from the previous task.
 Call the function with different inputs, and no inputs.
 **/
 
+function replacer(subs = 'krutt') {
+    return "Framførr tinget der dem satt, … Joik har større kraft enn " + subs;
+}
+
+//console.log(replacer('dynamitt'));
 
 /**
 Arrow functions
@@ -23,6 +35,14 @@ Arrow functions
 Using the provided array of reindeer owners,
 find and show owners that has a firstName of “Mikkel”.
 **/
+
+var mikkels = registry.filter(
+  o => o.firstName === 'Mikkel'
+);
+
+/*mikkels.forEach(o => {
+  console.log(o.firstName + ' ' + o.lastName)
+});*/
 
 
 /**
@@ -33,6 +53,14 @@ It should print the full name of all reindeer owners.
 
 Use destructuring (and forEach).
 **/
+
+function printOwner(owners) {
+  owners.forEach(({firstName, lastName}) => {
+    console.log(firstName + ' ' + lastName);
+  });
+}
+
+//printOwner(registry);
 
 /**
 Rest parameters
@@ -51,6 +79,14 @@ var contains = (list, element) => {
       return value === element;
     });
 };
+
+function findOwnersFrom(...places) {
+    return registry.filter(owner => {
+        return contains(places, owner.place);
+    });
+}
+
+//console.log('Owners from Trofors: ' + findOwnersFrom('Trofors').length);
 
 /**
 Spread operator
@@ -92,6 +128,12 @@ var newOwners = [
     c6: 'c'
   }];
 
+//console.log('Reindeer owners: ' + registry.length);
+
+registry.push(...newOwners);
+
+//console.log('Reindeer owners:' + registry.length);
+
 
 /**
 Generators
@@ -103,3 +145,18 @@ Extra task:
 Create a “Mikkel” generator, returning owners with the firstName of Mikkel.
 **/
 
+function* fibonacci() {
+    let [prev, curr] = [0, 1];
+    while (true) {
+        yield curr;
+        [prev, curr] = [curr, prev + curr];
+    }
+}
+
+var fib = fibonacci();
+
+/*console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());*/

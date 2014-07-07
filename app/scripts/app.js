@@ -1,6 +1,14 @@
 var registry = require('./registry');
 
 /**
+Template Literals
+=================
+Write a function that prints out the given name in a sentence,
+using template strings.
+**/
+
+
+/**
 Default parameters
 ==================
 Create a function that logs out the text for the Norwegian entry in the
@@ -85,14 +93,6 @@ var newOwners = [
     c5: 'q',
     c6: 'c'
   }];
-
-
-/**
-Template Literals
-=================
-Write a function that prints out the given name in a sentence,
-using template strings.
-**/
 
 
 /**

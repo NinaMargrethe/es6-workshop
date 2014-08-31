@@ -25,9 +25,11 @@ gulp.task('scripts', function () {
   return browserify([
       es6ify.runtime,
       scriptDir + 'app.js'
-    ])
+    ], {
+      debug: true
+    })
     .transform(es6ify)
-    .bundle({ debug: true })
+    .bundle()
     .on('error', gutil.log)
     .pipe(mold.transformSourcesRelativeTo(baseDir))
     .pipe(source('app.js'))

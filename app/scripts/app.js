@@ -23,11 +23,14 @@ Add a default name to the function from the previous task.
 Call the function with different inputs, and no inputs.
 **/
 
-function replacer(subs = 'krutt') {
-    return "Framførr tinget der dem satt, … Joik har større kraft enn " + subs;
-}
+var msg = function(name = 'Truls') {
+  let tmpl = `Howdy ${name}!`;
+  console.log(tmpl);
+};
 
-//console.log(replacer('dynamitt'));
+
+//console.log(msg(''));
+//console.log(msg('Lars'));
 
 /**
 Arrow functions

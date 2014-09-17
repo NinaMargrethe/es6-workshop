@@ -11,9 +11,7 @@ using template strings.
 /**
 Default parameters
 ==================
-Create a function that logs out the text for the Norwegian entry in the
-Eurovision Song Contest 1980, «Sámiid Ædnan»,
-with the word “krutt” replaceable by an argument given to the function.
+Add a default name to the function from the previous task.
 
 Call the function with different inputs, and no inputs.
 **/
